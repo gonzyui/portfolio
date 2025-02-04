@@ -14,8 +14,12 @@ import {
     SiNodedotjs, SiReact
 } from "react-icons/si";
 
+interface User {
+    followers: number;
+}
+
 function Home() {
-    const [user, setUser] = useState<never[]>([]);
+    const [user, setUser] = useState<User | null>(null);
     const [repos, setRepos] = useState<never[]>([]);
     const [commits, setCommits] = useState<number>(0);
 
@@ -137,7 +141,7 @@ function Home() {
                             name: "Portfolio",
                             description: "My portfolio made using React with Vite. Simple one-page, maybe more soon.",
                             link: "https://gonzyuidev.xyz",
-                            languages: ["TypeScript", "Vite", "React"],
+                            languages: ["TypeScript", "Vite", "React", "Sass"],
                         },
                         {
                             name: "Dofus API Wrapper",
