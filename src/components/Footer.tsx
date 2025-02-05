@@ -20,7 +20,7 @@ function Footer() {
             <p>© 2025 gonzyui. All rights reserved.</p>
             <div className="footer-socials">
                 <a href="https://github.com/gonzyui" target="_blank"><SiGithub /></a>
-                <a href="https://bsky.app/profile/gonzyui.bsky.social" target="_blank"><SiBluesky /></a>
+                <a href="https://bsky.app/profile/gonzyuidev.xyz" target="_blank"><SiBluesky /></a>
                 <a href="https://github.com/gonzyui/portfolio">Source Code</a>
             </div>
             <div className="theme-lang-selector">

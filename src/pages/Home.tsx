@@ -76,7 +76,7 @@ function Home() {
                         <p className="bio">22yo, passionate developer | Learning is life</p>
                         <div className="socials">
                             <a href="https://github.com/gonzyui" target="_blank"><SiGithub /></a>
-                            <a href="https://bsky.app/profile/gonzyui.bsky.social" target="_blank"><SiBluesky /></a>
+                            <a href="https://bsky.app/profile/gonzyuidev.xyz" target="_blank"><SiBluesky /></a>
                             <a href="https://discord.com/channels/users/1313488187330531399" target="_blank"><SiDiscord /></a>
                         </div>
                     </div>
