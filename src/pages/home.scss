@@ -42,7 +42,7 @@ body {
 
   .profile-banner {
     position: relative;
-    width: 87%;
+    width: 100%;
     height: 200px;
     overflow: hidden;
     border-radius: 30px;
@@ -100,12 +100,17 @@ body {
 
 .stats {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
 
   .stat-box {
+    display: flex;
+    flex-direction: column;
     background: var(--bg);
-    padding: 20px;
     border-radius: 8px;
     text-align: center;
     flex: 1;
@@ -187,6 +192,9 @@ body {
     justify-content: center;
 
     .project-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       background-color: var(--bg);
       padding: 20px;
       width: 300px;
@@ -203,7 +211,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
-        margin-bottom: 10px;
+        margin-bottom: auto;
 
         .lang {
           background-color: var(--highlight);
@@ -227,6 +235,7 @@ body {
         text-decoration: none;
         border-bottom: 2px solid var(--highlight);
         transition: border-color var(--transition-duration);
+        margin-top: auto;
 
         &:hover {
           border-color: var(--primary);
@@ -236,33 +245,156 @@ body {
   }
 }
 
+@media (max-width: 1024px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .profile-banner {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 30px;
+    }
+
+    .banner-img {
+      width: 775px;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(8px);
+      border-radius: 30px;
+    }
+
+    .profile-pic-wrapper {
+      position: relative;
+      top: -60px;
+      left: 0;
+    }
+
+    .profile-info {
+      text-align: center;
+      h1 {
+        font-size: 2rem;
+      }
+      .bio {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .stat-box {
+      width: 45%;
+      margin-bottom: 15px;
+      justify-content: space-between;
+    }
+  }
+
+  .skills ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .projects-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .profile {
-    flex-direction: column;
-    text-align: center;
-    .banner-img {
+    display: flex;
+    .profile-banner {
       width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 30px;
+    }
+
+    .banner-img {
+      width: 400px;
       height: 100%;
+      object-fit: cover;
+      filter: blur(8px);
+      border-radius: 30px;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+    }
+
+    .profile-info {
+      text-align: center;
+      h1 {
+        font-size: 1.8rem;
+      }
+      .bio {
+        font-size: 0.9rem;
+      }
     }
   }
 
   .stats {
     flex-direction: column;
+    align-items: center;
+
+    .stat-box {
+      width: 80%;
+      padding: 15px;
+    }
   }
 
-  .stat-box {
-    margin-bottom: 15px;
-    width: 70%;
-    align-items: center;
-    align-self: center;
+  .skills ul {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
   }
 
   .projects-container {
     flex-direction: column;
-    align-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    .profile-banner {
+      height: 140px;
+    }
+
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+    }
+
+    .profile-info {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .bio {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .stats {
+    .stat-box {
+      width: 90%;
+      padding: 10px;
+    }
   }
 
   .skills ul {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .projects-container {
+    .project-card {
+      width: 90%;
+      padding: 15px;
+    }
   }
 }

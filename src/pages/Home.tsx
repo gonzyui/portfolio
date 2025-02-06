@@ -133,9 +133,9 @@ function Home() {
                     {[
                         {
                             name: "Niji platform",
-                            description: "Niji is a platform for anime community, providing an API, a Discord community, and more.",
+                            description: "Niji is a platform for anime community, providing an API, a Discord community...",
                             link: "https://nijiapi.xyz",
-                            languages: ["TypeScript", "MongoDB", "Redis", "React"],
+                            languages: ["Typescript"],
                         },
                         {
                             name: "Portfolio",
