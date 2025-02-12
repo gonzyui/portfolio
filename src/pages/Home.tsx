@@ -132,10 +132,10 @@ function Home() {
                 <div className="projects-container">
                     {[
                         {
-                            name: "Niji platform",
-                            description: "Niji is a platform for anime community, providing an API, a Discord community...",
-                            link: "https://nijiapi.xyz",
-                            languages: ["Typescript"],
+                            name: "Niji-Chan",
+                            description: "Niji-Chan is a discord bot that sends alerts on episode hiring.",
+                            link: "https://nijichan.xyz",
+                            languages: ["Typescript", "Redis", "MongoDB"],
                         },
                         {
                             name: "Portfolio",
@@ -149,6 +149,12 @@ function Home() {
                             link: "https://github.com/gonzyui/dofus-api-wrapper",
                             languages: ["TypeScript"],
                         },
+                        {
+                            name: "Nova-API",
+                            description: "Nova is an unofficial Anilist API.",
+                            link: "https://github.com/gonzyui/nova-api",
+                            languages: ["Go", "Redis"],
+                        }
                     ].map(({ name, description, link, languages }) => (
                         <div className="project-card" key={name}>
                             <div className="project-languages">
