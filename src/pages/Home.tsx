@@ -11,7 +11,7 @@ import {
     SiMysql, SiNextdotjs, SiPostman, SiRedis, SiSass,
     SiSpigotmc, SiSwift, SiTypescript, SiUbuntu, SiVite,
     SiWebstorm, SiXcode, SiBluesky, SiDiscord, SiGithub,
-    SiNodedotjs, SiReact
+    SiNodedotjs, SiReact, SiGo
 } from "react-icons/si";
 
 interface User {
@@ -109,6 +109,7 @@ function Home() {
                         { icon: <SiDebian />, name: "Debian" },
                         { icon: <SiMysql />, name: "SQL" },
                         { icon: <SiPostman />, name: "Postman" },
+                        { icon: <SiGo/>, name: "Go" },
                         { icon: <SiRedis />, name: "Redis" },
                         { icon: <SiKotlin />, name: "Kotlin" },
                         { icon: <SiSpigotmc />, name: "Spigot" },
