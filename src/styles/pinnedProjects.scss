@@ -1,0 +1,90 @@
+@use 'themes';
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.profile-content {
+  padding: 2rem 1rem;
+  background: var(--bg-light);
+  color: var(--text-color);
+}
+
+.pinned-repos {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+
+  .repo-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .repo-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    p {
+      flex: 1;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+    }
+
+    .repo-info {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+      color: var(--muted-color);
+
+      .language {
+        display: flex;
+        align-items: center;
+
+        .language-color {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
+      }
+
+      .stars,
+      .forks {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

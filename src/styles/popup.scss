@@ -1,0 +1,85 @@
+@use 'themes';
+
+.donation-popup {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: fadeIn 0.5s ease;
+
+  .close-button {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--muted-color);
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  .popup-content {
+    text-align: center;
+
+    p {
+      margin: 0 0 1rem;
+      font-size: 1rem;
+    }
+
+    .popup-buttons {
+      display: flex;
+      justify-content: space-around;
+      gap: 0.5rem;
+
+      a {
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        transition: background 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      .donate-button {
+        background: var(--primary-color);
+        color: #fff;
+
+        &:hover {
+          background: var(--primary-color), 10%;
+        }
+      }
+
+      .star-button {
+        background: var(--secondary-color);
+        color: #fff;
+
+        &:hover {
+          background: var(--secondary-color), 10%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

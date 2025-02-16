@@ -1,0 +1,14 @@
+@use 'themes';
+
+.profile-footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-light);
+  border-top: 1px solid var(--border-color);
+
+  p {
+    font-size: 0.85rem;
+    color: var(--muted-color);
+    margin: 0;
+  }
+}

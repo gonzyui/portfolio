@@ -1,0 +1,24 @@
+@use 'themes';
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.theme-toggle-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-color);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    color: var(--primary-hover, #025aa5);
+  }
+}

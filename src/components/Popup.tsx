@@ -1,22 +1,39 @@
-import {FaTimes} from "react-icons/fa";
+import { FaTimes, FaGithub } from "react-icons/fa";
 import { useState } from "react";
-import "./popup.scss";
+import "../styles/popup.scss";
 
-function DonationPopup() {
-    const [visible, setVisible] = useState(true);
-
-    if (!visible) return null;
+const Popup = () => {
+    const [isOpen, setIsOpen] = useState(true);
+    if (!isOpen) return null;
 
     return (
-        <div className="popup">
-            <p>Support my work with a donation! ❤️</p>
-            <p>Cannot donate ? Leave a star on <a href="https://github.com/gonzyui" target="_blank" rel="noopener noreferrer">GitHub</a> !</p>
-            <a href="https://buymeacoffee.com/gonzyui" target="_blank" rel="noopener noreferrer">
-                Donate
-            </a>
-            <button onClick={() => setVisible(false)}><FaTimes/></button>
+        <div className="donation-popup">
+            <button className="close-button" onClick={() => setIsOpen(false)}>
+                <FaTimes />
+            </button>
+            <div className="popup-content">
+                <p>Support my work!</p>
+                <div className="popup-buttons">
+                    <a
+                        href="https://buymeacoffee.com/gonzyui"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="donate-button"
+                    >
+                        Donate
+                    </a>
+                    <a
+                        href="https://github.com/gonzyui"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="star-button"
+                    >
+                        <FaGithub size={20} /> Star on GitHub
+                    </a>
+                </div>
+            </div>
         </div>
     );
-}
+};
 
-export default DonationPopup;
+export default Popup;

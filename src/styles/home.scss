@@ -1,0 +1,29 @@
+@use 'pinnedProjects';
+@use 'profileSidebar';
+@use 'themes';
+@use 'footer';
+
+.github-profile {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg-light, #f6f8fa);
+  color: var(--text-color, #24292e);
+
+  .profile-main {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    .profile-sidebar {
+      flex: 0 0 300px;
+      margin-right: 2rem;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}
