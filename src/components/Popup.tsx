@@ -15,7 +15,7 @@ const Popup = () => {
                 <p>Support my work!</p>
                 <div className="popup-buttons">
                     <a
-                        href="https://buymeacoffee.com/gonzyui"
+                        href="https://ko-fi.com/gonzyui"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="donate-button"
