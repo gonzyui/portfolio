@@ -54,7 +54,7 @@
 
       .donate-button {
         background: var(--primary-color);
-        color: var(--text-color, #24292e);
+        color: #fff;
 
         &:hover {
           background: var(--primary-color), 10%;
@@ -63,7 +63,7 @@
 
       .star-button {
         background: var(--secondary-color);
-        color: #fff;
+        color: var(--text-color, #24292e);
 
         &:hover {
           background: var(--secondary-color), 10%;
