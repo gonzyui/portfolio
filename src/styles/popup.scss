@@ -54,7 +54,7 @@
 
       .donate-button {
         background: var(--primary-color);
-        color: #fff;
+        color: var(--text-color, #24292e);
 
         &:hover {
           background: var(--primary-color), 10%;
