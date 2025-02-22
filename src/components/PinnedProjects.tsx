@@ -18,7 +18,7 @@ const PinnedProjects = () => {
     const [repos, setRepos] = useState<Repo[]>([]);
     const username = "gonzyui";
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const pinnedRepoNames = ["Actunime-RPC", "portfolio", "Discord-Template-V14", "Anime8-AI];
+    const pinnedRepoNames = ["Actunime-RPC", "portfolio", "Discord-Template-V14", "Anime8-AI"];
 
     useEffect(() => {
         const fetchRepos = async () => {
